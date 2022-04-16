@@ -1,5 +1,13 @@
 version: "2.2.3"
 services:
+  mongo-seed: 
+    build: ./mongo-seed
+    links: 
+      - mongodb
+  mongodb: 
+    image: mongo
+    ports: 
+      - "27017:27017"
   spark-master:
     image: cluster-apache-spark:3.0.2
     ports:
@@ -47,11 +55,4 @@ services:
     volumes:
         - ./apps:/opt/spark-apps
         - ./data:/opt/spark-data
-   mongodb:
-    image: mongo
-    ports: 
-      - "5432:5432"
-   mongo-seed:
-    build: ./mongo-seed
-    links:
-      - mongodb
+ 
