@@ -1,4 +1,4 @@
-version: "3.3"
+version: "2.2.3"
 services:
   spark-master:
     image: cluster-apache-spark:3.0.2
@@ -47,8 +47,11 @@ services:
     volumes:
         - ./apps:/opt/spark-apps
         - ./data:/opt/spark-data
-  demo-database:
+   mongodb:
     image: mongo
     ports: 
       - "5432:5432"
-   
+   mongo-seed:
+    build: ./mongo-seed
+    links:
+      - mongodb
