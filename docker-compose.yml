@@ -1,19 +1,17 @@
 version: "2.2.3"
 services:
   mongo-seed: 
-    build: ./mongo-seed
+    image: mongo
     links: 
       - mongodb
-    depends_on:
-      - mongodb
+    volume: 
+      - ./mongo-seed:/mongo-seed
+    command:
+      /mongo-seed/import.sh
   mongodb: 
     image: mongo
-    environment:
-      - MONGO_INITDB_ROOT_USERNAME=root
-      - MONGO_INITDB_ROOT_PASSWORD=example
     ports: 
       - "27017:27017"
-    command: mongod
   spark-master:
     image: cluster-apache-spark:3.0.2
     links:
