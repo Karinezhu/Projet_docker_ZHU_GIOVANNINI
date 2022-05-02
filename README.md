@@ -1,8 +1,9 @@
-# Spark cluster + Mongodb : 
+# Apache spark cluster + Mongodb on Docker: 
+
+## This project 
 
 ```
 Docker-compose up -d
-
 ```
 
 ```
