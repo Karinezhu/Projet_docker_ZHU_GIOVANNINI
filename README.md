@@ -2,6 +2,13 @@
 
 ## This project 
 
+Build the image 
+
+```
+docker build -t cluster-apache-spark:3.0.2 .
+```
+
+Start the cluster
 ```
 Docker-compose up -d
 ```
