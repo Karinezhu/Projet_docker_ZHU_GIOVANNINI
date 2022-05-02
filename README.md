@@ -2,10 +2,9 @@
 
 ## Installation
 
-### Retrieve the datasets
+### Retrieve the dataset
 ```
 https://raw.githubusercontent.com/Karinezhu/Projet_docker_ZHU_GIOVANNINI/master/Dry_Bean_Dataset.csv
-https://raw.githubusercontent.com/Karinezhu/Projet_docker_ZHU_GIOVANNINI/master/opendata.json
 ```
 
 ### Prerequisites
@@ -35,7 +34,11 @@ docker exec -it spark-master1 bash
 apt update
 apt install python3-pip
 pip3 install pyspark
-pyspark
+```
+
+#### Run pyspark
+```
+pyspark --packages org.mongodb.spark:mongo-spark-connector_2.12:2.4.2 --master spark://spark-master1:7077
 ```
 
 ## Run Mongo alone 
