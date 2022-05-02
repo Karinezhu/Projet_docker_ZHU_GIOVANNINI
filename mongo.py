@@ -1,5 +1,5 @@
 import pymongo
-import pymongo_spark
+import pymongo
 
 mongo_url = 'mongodb://mongo:27017/'
 
