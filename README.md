@@ -2,6 +2,12 @@
 
 ## Installation
 
+### Retrieve the datasets
+```
+https://raw.githubusercontent.com/Karinezhu/Projet_docker_ZHU_GIOVANNINI/master/Dry_Bean_Dataset.csv
+https://raw.githubusercontent.com/Karinezhu/Projet_docker_ZHU_GIOVANNINI/master/opendata.json
+```
+
 ### Prerequisites
   - Install Docker and Docker compose
 
