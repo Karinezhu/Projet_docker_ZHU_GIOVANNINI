@@ -41,6 +41,29 @@ pip3 install pyspark
 pyspark --packages org.mongodb.spark:mongo-spark-connector_2.12:2.4.2 --master spark://spark-master1:7077
 ```
 
+## Connection to Mongo db
+
+```
+from pyspark import SparkConf, SparkContext
+from pyspark.sql import SQLContext
+```
+
+```
+sc.stop()
+```
+
+```
+sparkConf = SparkConf().setAppName("App")
+sparkConf.set("spark.mongodb.input.uri", "mongodb://mongodb1:27017/Bdtest.grain")
+sparkConf.setMaster("spark://spark-master1:7077")
+sparkConf.set("spark.submit.deployMode", "cluster")
+sc = SparkContext(conf = sparkConf)
+sqlContext =SQLContext(sc)
+df = sqlContext.read.format("com.mongodb.spark.sql.DefaultSource").load()
+df.printSchema()
+```
+
+
 ## Run Mongo alone 
 
 1.Copy the dataset on the mongo container.
