@@ -4,7 +4,7 @@
 
 ### Retrieve the dataset
 ```
-https://raw.githubusercontent.com/Karinezhu/Projet_docker_ZHU_GIOVANNINI/master/Dry_Bean_Dataset.csv
+wget https://raw.githubusercontent.com/Karinezhu/Projet_docker_ZHU_GIOVANNINI/master/Dry_Bean_Dataset.csv
 ```
 
 ### Prerequisites
