@@ -63,8 +63,9 @@ df = sqlContext.read.format("com.mongodb.spark.sql.DefaultSource").load()
 df.printSchema()
 ```
 
+![image](https://user-images.githubusercontent.com/77232278/166683483-2dcd732a-87f1-4399-b303-56a1f66f350b.png)
 
-## Run Mongo alone 
+## Create the mongo database
 
 1.Copy the dataset on the mongo container.
 
@@ -87,7 +88,7 @@ mongoimport -d Bdtest -c grain --file /tmp/Dry_Bean_Dataset.csv --headerline --t
 4.Run mongosh 
 
 ```
-mongosh
+mongosh 27017
 ```
 
 Now we can use the below commands to use the database and retrieve some data.
@@ -97,3 +98,5 @@ show bds
 use Bdtest
 db.grain.find().pretty()
 ```
+
+![image](https://user-images.githubusercontent.com/77232278/166684085-6f67ac45-863a-498f-90bb-47e4a698cc72.png)
