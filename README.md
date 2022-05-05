@@ -209,6 +209,13 @@ docker build . -t cluster_image:1.0.0
 ```
 
 ### Start the cluster
+
+Return to the root first.
+
+```
+cd ..
+```
+
 ```
 docker-compose up -d
 ```
@@ -216,11 +223,6 @@ docker-compose up -d
 ### Create the mongo database
 
 Now we are going to create the database to test with pyspark.
-Return to the root.
-
-```
-cd ..
-```
 
 1.Retrieve the dataset
 ```
