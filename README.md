@@ -127,6 +127,10 @@ CMD mongoimport --database Bdt --collection grain --file /Dry_Bean_Dataset.csv -
 mongoimport --database Bdt --collection grain --file /tmp/Dry_Bean_Dataset.csv --headerline --type csv
 ```
 
+##### The error
+
+![image](https://user-images.githubusercontent.com/77232278/166851746-8c1e37ee-b902-40ef-aca0-cac41303bc7c.png)
+
 #### Docker compose file
 ```
 version: "2.2.3"
