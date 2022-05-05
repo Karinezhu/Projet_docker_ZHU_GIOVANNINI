@@ -2,6 +2,11 @@
 
 In this project, we are going to build an standalone Apache Spark cluster with Mongodb.
 
+## Links for Docker hub repertories
+
+  - [Cluster image](https://hub.docker.com/repository/docker/karinezhu/cluster_image)
+
+
 ## Cluster overview
 
 The cluster is composed of four main components: Mongodb, the Spark master node and two Spark workers nodes.
@@ -317,6 +322,4 @@ df.printSchema()
 
 ![image](https://user-images.githubusercontent.com/77232278/166683483-2dcd732a-87f1-4399-b303-56a1f66f350b.png)
 
-## Links for Docker hub repertories
 
-  - [Cluster image](https://hub.docker.com/repository/docker/karinezhu/cluster_image)
